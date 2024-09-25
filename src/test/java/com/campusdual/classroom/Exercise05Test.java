@@ -52,29 +52,29 @@ class Exercise05Test {
     @DisplayName("Check multiply")
     void testCheckMultiply() {
         Exercise05.checkMultiply(6,3);
-        boolean checkMulti = this.outContent.toString().contains(" es múltiplo de ");
+        boolean checkMulti = this.outContent.toString().contains(" es multiplo de ");
         this.outContent.reset();
-        assertTrue(checkMulti, "n1 not multiply of n2");
+        assertTrue(checkMulti, "n1 no es multiplo de n2");
         Exercise05.checkMultiply(3,6);
-        boolean checkNotMulti = this.outContent.toString().contains(" no es múltiplo de ");
+        boolean checkNotMulti = this.outContent.toString().contains(" no es multiplo de ");
         this.outContent.reset();
-        assertTrue(checkNotMulti, "n1 multiply of n2");
+        assertTrue(checkNotMulti, "n1 es multiplo de n2");
     }
 
     @Test
     @DisplayName("Check positive - zero - negative")
     void testCheckPositiveNegative() {
         Exercise05.checkPositiveNegative(1);
-        boolean checkPositive = this.outContent.toString().contains(" es positivo.");
+        boolean checkPositive = this.outContent.toString().contains("1 es positivo.");
         this.outContent.reset();
-        assertTrue(checkPositive, "n1 is not positive");
+        assertTrue(checkPositive, "n1 no es positivo");
         Exercise05.checkPositiveNegative(0);
-        boolean checkZero = this.outContent.toString().contains(" es positivo.");
+        boolean checkZero = this.outContent.toString().contains("0 es positivo.");
         this.outContent.reset();
-        assertTrue(checkZero, "n1 is not zero");
+        assertTrue(checkZero, "n1 no es cero");
         Exercise05.checkPositiveNegative(-1);
-        boolean checkNegative = this.outContent.toString().contains(" es negativo.");
+        boolean checkNegative = this.outContent.toString().contains("-1 es negativo.");
         this.outContent.reset();
-        assertTrue(checkNegative, "n1 is not negative");
+        assertTrue(checkNegative, "n1 no es negativo");
     }
 }
